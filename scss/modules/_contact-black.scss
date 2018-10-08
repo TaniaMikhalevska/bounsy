@@ -1,0 +1,26 @@
+.contact-black {
+    background: url(../images/contact-bg.jpg) top center no-repeat;
+    background-size: cover;
+    color: $white;
+    text-align: center;
+    padding-bottom: 57px;
+    @media (min-width: 320px) and (max-width: 479px) {
+        padding-bottom: 15px;
+    }
+    &__title {
+        font-size: 20px;;
+        letter-spacing: .4px;
+        margin: 58px 32px;
+    }
+    &__btn {
+        line-height: 38px;
+        padding: 10px 34px;
+        border: 1px solid $white;
+        border-radius: 18.5px;
+        color: $white;
+        &:hover {
+            color: $green;
+            border-color: $green;
+        }
+    }
+}

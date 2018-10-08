@@ -1,0 +1,85 @@
+.testi {
+    background: #f3f3f3;
+    text-align: center;
+    padding-bottom: 103px;
+    @media (min-width: 320px) and (max-width: 480px) {
+        padding-bottom: 15px;
+        } 
+    @media (min-width: 481px) and (max-width: 991px) {
+        padding-bottom: 30px;
+        } 
+    .section__title {
+        margin: 64px 0 36px;
+        @media (min-width: 320px) and (max-width: 480px) {
+        margin: 15px 0;
+        } 
+    }
+    .section__description {
+        margin-bottom: 60px;
+        @media (min-width: 320px) and (max-width: 480px) {
+        margin-bottom: 15px;
+        } 
+    }
+    &__slider {
+        background: $white;
+        padding: 53px 0 58px;
+        @media (min-width: 320px) and (max-width: 767px) {
+        padding: 15px 0;
+        } 
+        @media (min-width: 768px) and (max-width: 991px) {
+        padding: 30px 0;
+        }
+    }
+    .slider {
+        &__item {
+            display: flex;
+            justify-content: space-between; 
+            padding: 0 100px;
+            @media (min-width: 320px) and (max-width: 991px) {
+                padding: 0;
+            } 
+        }
+        &__text--testi {
+            text-align: left;
+            width: 76%;
+            @media (min-width: 320px) and (max-width: 991px) {
+                width: 100%;
+            }
+        }
+        &__info--testi {
+            color: #81868e;
+            font: 400 1rem/1.75rem $main-font;
+            margin-bottom: 30px;
+            @media (min-width: 320px) and (max-width: 991px) {
+                margin-bottom: 15px;
+                    padding-right: 15px;
+            }
+        }
+        &__author--testi {
+            font-weight: 700;
+            color: $green;
+            text-transform: uppercase;
+        }
+        &__profession--testi {
+            font-size: .825rem;
+            color: #464646;
+            text-transform: uppercase;
+            margin: 8px 0 45px;
+            @media (min-width: 320px) and (max-width: 767px) {
+                margin: 0 0 15px;
+        } 
+            @media (min-width: 768px) and (max-width: 992px) {
+                margin: 0 0 30px;
+        }
+        }
+        &__img {
+            align-self: flex-start;
+            @media (min-width: 320px) and (max-width: 991px) {
+                margin: 15px;
+            }
+            @media (min-width: 320px) and (max-width: 480px) {
+                @include size(15%);
+            }
+        }
+    }
+}

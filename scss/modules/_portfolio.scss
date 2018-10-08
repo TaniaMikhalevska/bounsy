@@ -1,0 +1,72 @@
+.portfolio {
+    text-align: center;
+    background: #f3f3f3;
+    padding-bottom: 30px;
+    @media (min-width: 320px) and (max-width: 767px) {
+           padding-bottom: 15px;
+        }
+    .section__title {
+        margin: 86px 0 36px;
+        @media (min-width: 768px) and (max-width: 992px) {
+           margin: 30px 0;
+        }
+        @media (min-width: 320px) and (max-width: 767px) {
+           margin: 15px 0;
+        }
+    }
+    .section__description {
+        margin-bottom: 86px;
+        @media (min-width: 768px) and (max-width: 992px) {
+           margin-bottom: 30px;
+        }
+        @media (min-width: 320px) and (max-width: 767px) {
+           margin-bottom: 15px;
+        }
+    }
+  
+
+        &__filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 75px;
+            @media (min-width: 768px) and (max-width: 992px) {
+           margin-bottom: 30px;
+        }
+        @media (min-width: 320px) and (max-width: 767px) {
+           margin-bottom: 15px;
+        }
+            .active{
+            &::after {
+                background: $green;
+                @include pos($b: -12px, $l: calc(50% - 19px));
+                @include size(38px, 2px);
+                content: "";
+                }
+        }
+    }
+        &__filter {
+            margin: 0 10px;
+            color: #464646;
+            position: relative;
+           
+        }
+    &__item {
+        width: calc(25% - 10px);
+        margin: 5px;
+        overflow: hidden;
+        border: 0 !important;
+    }
+    &__img {
+        transition: all .3s ease-in;
+    }
+    &__img:hover {
+        transform: scale(1.05);
+    }
+    &__demonstration {
+        display: flex;
+        justify-content: center;
+    }
+  
+}
+
+

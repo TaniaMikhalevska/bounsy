@@ -1,0 +1,155 @@
+.header {
+    background: url(../images/header_bg.jpg) top center no-repeat;
+    height: 100vh;
+    background-size: cover;
+    color: $white;
+    
+    text-align: center;
+    overflow: hidden;
+       
+    & a {
+        color: $white;
+         
+    }
+    &__nav {
+        margin: 46px 0 220px;
+        display: flex;
+        justify-content: space-between;
+        
+        @media (min-width: 320px) and (max-width: 575px) {
+            
+        }
+        @media (min-width: 320px) and (max-width: 767px) {
+        margin: 15px 0 40px;
+        }  
+        @media (min-width: 768px) and (max-width: 992px) {
+        margin: 46px 0 100px;
+        } 
+        &-items {
+            display: flex;
+            transition: all .5s ease;
+            @media (min-width: 320px) and (max-width: 575px) {
+                @include pos($r:-100%, $t: 50px);
+                padding-right: 15px;
+                .header__nav-link {
+                    line-height: 4rem;
+                    font-size: 1.5rem;
+                    border-color: $green;
+                    background-color: rgba(0,0,0, .1);
+                }
+            }
+            @media (min-width: 576px) and (max-width: 767px) {
+                font-size: 1.5rem;
+                align-items: center;
+            }
+
+        }
+ 
+       
+        &-link {
+            padding: 7px 22px;
+            margin: 0 1px;
+            border: 1px solid transparent;
+            border-radius: 16.5px;
+            @media (min-width: 320px) and (max-width: 575px) {
+                padding: 7px;
+                margin: 0 3px;
+            }
+            &:hover {
+               border-color: $white; 
+            }
+            &--active {
+                border-color: $white;
+            }
+        }
+        &-min {
+            display: none;
+            @media (min-width: 320px) and (max-width: 575px) {
+                display: block;
+                position: absolute;
+                right: 15px;
+            }
+            
+        
+        & span {
+            @include size(24px, 3px);
+            top: 9px;
+            position: relative;
+            display: block;
+            background: $white;
+            transition: background 0s 0.1s;
+            &::before,&::after {
+                @include size(24px, 3px);
+                @include pos($l: 0);
+                content: "";
+                background: $white;
+                transition-duration: 0.3s, 0.3s;
+                transition-delay: 0.3s, 0s;
+                
+            }
+            &::before {
+                top: 9px;
+                transition-property: bottom, transform;
+            }
+            &::after {
+                bottom: 9px;
+                transition-property: top, transform;
+            }
+              
+        }
+         &--close span {
+                background: none;
+                &::before,&::after {
+                    transition-delay: 0s, 0.1s;
+                }
+                &::before {
+                    top: 0;
+                    transform: rotate(-45deg);
+                }
+                &::after {
+                    bottom: 0;
+                    transform: rotate(45deg);
+                }
+            }
+        &--close + .header__nav-items {
+            right: 0;
+            
+            
+            }
+        }
+        
+    }
+    &__title {
+        font: 300 2.1rem $main-font;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        @media (min-width: 320px) and (max-width: 575px) {
+            padding-top: 25px;
+        }
+    }
+    &__description {
+        margin-bottom: 186px;
+        letter-spacing: 0.5px;
+        @media (min-width: 320px) and (max-width: 767px)  {
+            margin-bottom: 20vh;
+            font-size: 1.25rem;
+        }
+        
+    }
+    &__slider {
+        @include size(36px,36px);
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        background: $green;
+        line-height: 40px;
+        margin-bottom: 77px;
+        @media (min-width: 320px) and (max-width: 767px)  {
+            font-size: 2rem;
+        }
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}
