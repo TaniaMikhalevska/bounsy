@@ -347,7 +347,7 @@ li.slick-active {
     margin-bottom: 15px;
   }
 }
-.portfolio__filters .active::after {
+.portfolio__filters .active::after, .portfolio__filters .portfolio__filter:hover::after {
   background: #19bd9a;
   position: absolute;
   bottom: -12px;
@@ -360,6 +360,7 @@ li.slick-active {
   margin: 0 10px;
   color: #464646;
   position: relative;
+  cursor: pointer;
 }
 .portfolio__item {
   width: calc(25% - 10px);
@@ -418,6 +419,9 @@ li.slick-active {
   .team .section__description, .team .slider__info {
     margin-bottom: 15px;
   }
+}
+.team__slider {
+  cursor: pointer;
 }
 .team .slider__item {
   display: flex;
@@ -584,6 +588,7 @@ li.slick-active {
   }
 }
 .testi__slider {
+  cursor: pointer;
   background: #fff;
   padding: 53px 0 58px;
 }

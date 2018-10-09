@@ -35,7 +35,7 @@
         @media (min-width: 320px) and (max-width: 767px) {
            margin-bottom: 15px;
         }
-            .active{
+            .active, .portfolio__filter:hover{
             &::after {
                 background: $green;
                 @include pos($b: -12px, $l: calc(50% - 19px));
@@ -48,6 +48,7 @@
             margin: 0 10px;
             color: #464646;
             position: relative;
+            cursor: pointer;
            
         }
     &__item {
